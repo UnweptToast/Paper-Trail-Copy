@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href="/static/styles.css" rel="stylesheet">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            //home
+            let buttonone = document.querySelector('#buttonone');
+            buttonone.addEventListener('click', function (event) {
+                buttonone.style.color = 'white';
+                location.href = '/';
+            });
+
+            //upload receipt
+            let buttontwo = document.querySelector('#buttontwo');
+            buttontwo.addEventListener('click', function (event) {
+                buttontwo.style.color = 'white';
+                location.href = '/upload_receipt';
+            });
+
+            //receipt summary
+            let buttonthree = document.querySelector('#buttonthree');
+            buttonthree.addEventListener('click', function (event) {
+                buttonthree.style.color = 'white';
+                location.href = '/receipt_summary';
+            });
+
+            document.querySelector('.btn-hamburger').addEventListener('click', () => document.querySelector('.left_side').classList.toggle('active'));
+
+        });
+    </script>
+
+    <title>Home</title>
+</head>
+
+<body>
+
+    <div class="whole_screen">
+
+        <button class="btn btn-primary btn-hamburger">
+            ☰
+        </button>
+
+        <div class="left_side">
+            <!-- Name and Icon -->
+            <div class="left_side_top">
+                <img alt="image of myself" src="../static/media/Paper Trial Logo.png" class="name_icon_icon">
+                <h5 class="name_icon_name">Paper Trail</h5>
+            </div>
+
+            <!-- Links -->
+            <div class="left_side_bottom">
+
+                <button class="links" id="buttonone">Home</button>
+                <br>
+                <button id="buttontwo" class="links">Upload Receipt</button>
+                <br>
+                <button id="buttonthree" class="links">Receipt Summarizer</button>
+
+            </div>
+
+            <footer class="copyright"></footer>
+            
+        </div>
+
+        <div class="right_side">
+            <div class="container">
+
+                <p class="heading_extra_pages">─ Home</p>
+
+                Paper Trail!!!
+                Welcome to our expense-tracking website! With just a photo of your receipt, our platform automatically extracts details and organizes each purchase into categories like groceries, dining, or transportation. Easily view your spending breakdown on a personalized dashboard, track monthly trends, and set budgeting goals with alerts to help you stay on track. You can also export your data to sync with financial apps, giving you complete control over your expenses—without the hassle of manual entry. Simplify your budgeting and take charge of your finances effortlessly!
+
+            </div> <!--container-->
+
+        </div> <!--right_side-->
+
+</body>
+
+</html>
